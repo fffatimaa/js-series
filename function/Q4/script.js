@@ -1,5 +1,5 @@
 //* take input from user and create array no fron 1 to n.
-//* use reduce to cal sum of all no in arr.
+//* use reduce to cal sum nd factorial of all no in arr.
 
 let n=prompt("enter the no : ");
 let arr=[];
