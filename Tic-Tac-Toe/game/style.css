@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    text-align: center;
+}
+h1 {
+    font-size: 50px;          
+    font-family: "Copperplate", "Papyrus", fantasy; 
+    color: rgb(110, 27, 41);  
+    margin-top: 30px;          
+}
+.container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+.box{
+    background-color: rgb(110, 27, 41);
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem black;
+    font-size: 40px;
+    color: black;
+    font-family: "Copperplate", "Papyrus", fantasy; 
+}
+#reset-btn{
+    padding: 10px;
+    font-size: 15px;
+    font-family:  "Comic Sans MS", cursive, sans-serif;
+    color: rgb(110, 27, 41);;
+    background-color: rgb(255, 190, 200);
+}
