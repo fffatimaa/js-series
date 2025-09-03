@@ -20,8 +20,7 @@ const winPatterns = [
 //add eventlistener what happens when a box is clicked
 boxes.forEach((box) => {
     box.addEventListener("click", () =>{
-        console.log("box was clicked");
-        if(turnO){
+       if(turnO){
           //playerO
           box.innerText ="O";
           //next turn will be for X
@@ -33,8 +32,9 @@ boxes.forEach((box) => {
         //next turn will be for O
         turnO =true;
        }
-       box.disabled = true;
+        box.disabled = true;
        //can't be clicked again
+      
 
        checkWinner();
     });
@@ -47,7 +47,7 @@ boxes.forEach((box) => {
         if(pos1Val !="" && pos2Val !="" && pos3Val !=""){
             if(pos1Val === pos2Val && pos2Val === pos3Val){
                 console.log("winner", pos1Val);
-                showWinner(pos1Val);
+                showWinner(pos1Val); //show winner O,X
             }
         }
         }
@@ -60,12 +60,12 @@ boxes.forEach((box) => {
     }
     const disableBoxes =() =>{
         for(let box of boxes){
-            box.disabled = true;
+            box.disabled = true; //button disable no more click
         }
     };
     const enableBoxes =() =>{
         for(let box of boxes){
-            box.disabled = false;
+            box.disabled = false; //can click
             box.innerText ="";
         }
     };
