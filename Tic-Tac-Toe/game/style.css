@@ -29,8 +29,9 @@ h1 {
 }
 .box{
     background-color: rgb(110, 27, 41);
-    height: 18vmin;
-    width: 18vmin;
+    
+    height: 120px;
+    width: 110px;
     border-radius: 1rem;
     border: none;
     box-shadow: 0 0 1rem black;
@@ -45,3 +46,19 @@ h1 {
     color: rgb(110, 27, 41);;
     background-color: rgb(255, 190, 200);
 }
+#new-btn{
+    padding: 10px;
+    font-size: 15px;
+    font-family:  "Comic Sans MS", cursive, sans-serif;
+    color: rgb(110, 27, 41);
+    background-color: rgb(255, 190, 200);
+}
+#msg{
+    color: rgb(110, 27, 41);
+    font-size:30px;
+}
+.hide{
+    display:none;
+}
+
+
