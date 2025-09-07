@@ -18,10 +18,8 @@ const genCompChoice =()=>{
     return option[ranIdx];
 }
 const playGame=(userId)=>{
-    console.log("user choice =" ,userId);
-    const compChoice = genCompChoice();
-    console.log("comp choice =" ,compChoice);
-
+   const compChoice = genCompChoice();
+    
     if(userId === compChoice){
         drawGame();
      } else{
