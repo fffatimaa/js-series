@@ -46,5 +46,64 @@ function getData(dataId, getNextData){    //*data return
         },6000);
     });
 }
+//promise
+
+function getData(dataId){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+           console.log("data",dataId);
+            resolve("success");
+        
+
+        },5000);
+
+    });
+}
+//Promise Chain
+console.log("getting data one");
+getData(1)
+  .then((res)=>{     //runs after a Promise is resolved
+    console.log("getting data two");
+    return getData(2);   //passed to the next then()
+  })
+  .then((res) =>{
+    console.log("getting data three");
+    return getData(3);
+  })
+  .then((res)=>{
+    console.log(res);
+  });
+
+//Async-Await
+  function getData(dataId){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("data",dataId);
+            resolve("success");
+        },4000);
+
+    });
+  }
+  async function getAllData(){
+    console.log("getting data 1");
+    await getData(1);
+    console.log("getting data 2");
+    await getData(2);
+    console.log("getting data 3");
+    await getData(3); 
+  }
+
+//IIFE(immediately invoked function expression)
+  (async function () {
+    console.log("getting data 1");
+    await getData(1);
+    console.log("getting data 2");
+    await getData(2);
+    console.log("getting data 3");
+    await getData(3); 
+  })();
+
+
+
 
 
