@@ -41,6 +41,8 @@ button.addEventListener("click", async (evt)=>{
    let rate = data.rates[toCurr.value];
   // console.log(`Converted amount: ${rate}`);
    let finalAmount = amtVal * rate;
+   //`1USD=1INR
    msg.innerText =`${amtVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
 });
 
+// Conversion will only work for these currencies: USD, EUR, INR, GBP, JPY
