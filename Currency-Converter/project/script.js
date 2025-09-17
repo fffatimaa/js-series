@@ -1,7 +1,8 @@
 const dropdowns = document.querySelectorAll(".dropdown select");
 const button = document.querySelector("form button");
-const fromCurr= document.querySelector(".from select");
-const toCurr= document.querySelector(".to select");
+const fromCurr = document.querySelector(".from select");
+const toCurr = document.querySelector(".to select");
+const msg = document.querySelector(".msg");
 
 for (select of dropdowns){
     for(country in countryList){
@@ -38,6 +39,8 @@ button.addEventListener("click", async (evt)=>{
    let response = await fetch(URL);
    let data = await response.json();
    let rate = data.rates[toCurr.value];
-   console.log(`Converted amount: ${rate}`);
+  // console.log(`Converted amount: ${rate}`);
+   let finalAmount = amtVal * rate;
+   msg.innerText =`${amtVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
 });
 
