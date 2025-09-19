@@ -19,7 +19,6 @@ class TicTacToe {
       [6, 7, 8],
     ];
 
-    // Initialize
     this.addBoxListeners();
     this.resetBtn.addEventListener("click", () => this.resetGame());
     this.newGameBtn.addEventListener("click", () => this.resetGame());
@@ -31,8 +30,6 @@ class TicTacToe {
       box.addEventListener("click", () => this.handleBoxClick(box));
     });
   }
-
-  // Handle box click
   handleBoxClick(box) {
     if (this.turnO) {
       box.innerText = "O";
@@ -83,5 +80,5 @@ class TicTacToe {
   }
 }
 // Start the game
-//const game = new TicTacToe();
+const game = new TicTacToe();
 

@@ -3,13 +3,13 @@ let Data = "Secert information";
 class User{
     constructor(name,email){
         this.name= name;
-        //variable this.email= email; //jo hum pass kr rhy hain
+        this.email= email; 
     }
     viewData(){         //method ViewData
         console.log("data = ", Data);
     }
 }
-let student1= new User("FATIMA","123@email.com");    //constructor function
+let student1= new User("FATIMA","123@email.com");  
 let student2= new User("FAISAL","456@email.com");
 
 // new class admin inherits from user
