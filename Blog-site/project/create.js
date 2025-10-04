@@ -1,4 +1,4 @@
-class blog{
+class Blog{
     constructor(image , title, body, author){
         this.image = image;
         this.title = title;
@@ -20,6 +20,19 @@ form.addEventListener("submit", (e) => {
     alert(" fill all");
     return;
   }
+  
+  let blog = new Blog(image,title,body,author);
+
+  let blogs = localStorage.getItem("blogs");
+  if(blogs){
+    blogs = JSON.parse(blogs);
+  } else {
+    blogs = [];
+  }
+  blogs.push(blog);
+  localStorage.setItem("blogs", JSON.stringify(blogs));
+
+  window.location = "index.html";
  
 });
 
