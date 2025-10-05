@@ -35,6 +35,6 @@ class Myblog {
   }
 }
 
-const app = new Myblog();
+const blogg = new Myblog();
 
 
